@@ -1,0 +1,18 @@
+.main-button {
+background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
+padding: 0.75rem 1.5rem;
+border-radius: 20px;
+border: transparent;
+margin: 1rem 0 0 0;
+box-shadow: $main-shadow;
+}
+.creator-button {
+    display: flex;
+    justify-content: left;
+    border: none;
+    background-color: $section-background-color;
+    border-radius: 25px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    box-shadow: $main-shadow;
+}

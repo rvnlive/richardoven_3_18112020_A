@@ -1,0 +1,16 @@
+body {
+    background-color: white;
+    margin: 0;
+ }
+
+@import "./Utils/_variables.scss";
+@import "./Utils/_functions.scss";
+
+@import "./Base/_typography.scss";
+
+@import "./Components/_buttons.scss";
+
+@import "./Layout/_navigation.scss";
+@import "./Layout/_sidebar.scss";
+
+@import "./Pages/_home.scss";

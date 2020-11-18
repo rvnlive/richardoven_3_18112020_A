@@ -1,0 +1,15 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+title {
+    font-family: "Shrikhand", sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+
+.dynamic--text--color {
+    color: set-text-color($main-button-background);
+}
