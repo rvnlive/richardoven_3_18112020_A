@@ -8,11 +8,22 @@ box-shadow: $main-shadow;
 }
 .creator-button {
     display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     justify-content: left;
     border: none;
     background-color: $section-background-color;
     border-radius: 25px;
     padding: 1.5rem 2rem;
     margin-bottom: 1rem;
+    margin-left: 10px;
     box-shadow: $main-shadow;
+    max-width: 343px;
+    &:hover {
+        background-color: $section-background-color;
+    }
+    &:active {
+        background-color: $color-when-active;
+        transition: background-color 300ms;
+    }
 }

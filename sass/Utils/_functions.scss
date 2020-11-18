@@ -1,4 +1,4 @@
-//Link text color dynamically changing if background dark or light //
+//Text color dynamically changing if background dark or light //
 @function set-text-color($color) {
     @if (lightness($color) > 50%) {
       @return black;

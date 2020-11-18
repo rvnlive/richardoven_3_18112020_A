@@ -7,6 +7,14 @@ body {
   text-decoration: none;
 }
 
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -34,13 +42,24 @@ p {
 
 .creator-button {
   display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   justify-content: left;
   border: none;
   background-color: #f6f6f6;
   border-radius: 25px;
   padding: 1.5rem 2rem;
   margin-bottom: 1rem;
+  margin-left: 10px;
   box-shadow: 0 5px 10px rgba(43, 43, 43, 0.219);
+  max-width: 343px;
+}
+.creator-button:hover {
+  background-color: #f6f6f6;
+}
+.creator-button:active {
+  background-color: #F5EDFF;
+  transition: background-color 300ms;
 }
 
 nav {
@@ -54,7 +73,28 @@ nav p {
 }
 
 aside {
-  margin: 2rem 1rem;
+  margin: 2rem 1.25rem;
+}
+aside .menu-creator {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 1.5rem;
+}
+aside .menu-creator .button-order-number {
+  background-color: #9356DC;
+  border: none;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: -45px;
+  margin-right: 20px;
+}
+aside .menu-creator .function-name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  margin-left: 30px;
 }
 
 header {
