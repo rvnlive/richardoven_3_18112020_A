@@ -7,6 +7,14 @@ body {
   text-decoration: none;
 }
 
+.--fadein {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 600ms;
+}
+
 @keyframes fadeInOpacity {
   0% {
     opacity: 0;
@@ -49,17 +57,31 @@ p {
   background-color: #f6f6f6;
   border-radius: 25px;
   padding: 1.5rem 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
   margin-left: 10px;
   box-shadow: 0 5px 10px rgba(43, 43, 43, 0.219);
   max-width: 343px;
 }
 .creator-button:hover {
-  background-color: #f6f6f6;
-}
-.creator-button:active {
   background-color: #F5EDFF;
-  transition: background-color 300ms;
+  transform: scale(1.1);
+}
+.creator-button:hover .fa-mobile-alt,
+.creator-button:hover .fa-list-ul,
+.creator-button:hover .fa-store {
+  color: #9356DC;
+}
+.creator-button:focus, .creator-button:active {
+  background-color: #9356DC;
+  color: white;
+  transition: background-color 300ms, color 150ms, border 100ms, transform 200ms;
+}
+.creator-button:focus .fa-mobile-alt,
+.creator-button:focus .fa-list-ul,
+.creator-button:focus .fa-store, .creator-button:active .fa-mobile-alt,
+.creator-button:active .fa-list-ul,
+.creator-button:active .fa-store {
+  color: white;
 }
 
 nav {

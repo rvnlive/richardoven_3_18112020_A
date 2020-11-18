@@ -15,15 +15,28 @@ box-shadow: $main-shadow;
     background-color: $section-background-color;
     border-radius: 25px;
     padding: 1.5rem 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     margin-left: 10px;
     box-shadow: $main-shadow;
     max-width: 343px;
     &:hover {
-        background-color: $section-background-color;
+        background-color: $color-when-hovered;
+        transform: scale(1.1);
+        .fa-mobile-alt,
+        .fa-list-ul,
+        .fa-store {
+            color: $primary-color;
+        }
     }
+    &:focus,
     &:active {
+        .fa-mobile-alt,
+        .fa-list-ul,
+        .fa-store {
+            color: white;
+        }
         background-color: $color-when-active;
-        transition: background-color 300ms;
+        color: set-text-color($main-button-background);
+        transition: background-color 300ms, color 150ms, border 100ms, transform 200ms;
     }
 }
