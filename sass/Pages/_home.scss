@@ -1,3 +1,4 @@
+//Header element !Homepage Only!//
 header {
   display: flex;
   flex-flow: row wrap;
@@ -28,3 +29,50 @@ header {
     }
   }
 }
+
+//Restaurant card//
+section {
+  padding-top: 1.5rem;
+  margin-bottom: 4.5rem;
+  background-color: $section-background-color;
+  h2 {
+    margin-left: 1rem;
+  }
+  main {
+    margin: 0 1rem;
+      .restaurant-card {
+        border-radius: 20px;
+        margin-bottom: 1em;
+        box-shadow: $main-shadow;
+          .restaurant-picture {
+            width: 343px;
+            height: 170px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            .recently-added {
+              float: right;
+              margin: 1em 1em 0 0;
+              padding: 0.25em 1.5em;
+              background-color: $tertiary-color;
+              color: darken($tertiary-color, 35%);
+              font-size: 13px;
+              border-radius: 2px;
+            }
+          }
+          .restaurant-details {
+            display: block;
+            height: 50px;
+            margin: 10px 15px 0 15px;
+            .restaurant-name {
+              margin-top: 0.25rem;
+              line-height: 0.25rem;
+            }
+            .restaurant-location {
+              padding-top: -2rem;
+              line-height: 0.15rem;
+            }
+          }
+      }
+  }
+}
+

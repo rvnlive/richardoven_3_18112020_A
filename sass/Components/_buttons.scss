@@ -1,42 +1,66 @@
+//Explore; Order button//
 .main-button {
-background-image: linear-gradient(to bottom, $secondary-color, $primary-color);
-padding: 0.75rem 1.5rem;
-border-radius: 20px;
-border: transparent;
-margin: 1rem 0 0 0;
-box-shadow: $main-shadow;
+  background-image: linear-gradient(
+    to bottom,
+    $secondary-color,
+    $primary-color
+  );
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  border: transparent;
+  margin: 1rem 0 0 0;
+  box-shadow: $main-shadow;
+  &:hover {
+    transform: scale(1.2);
+    transition-delay: 150ms, 300ms;
+  }
 }
+
+//Menu creator button//
 .creator-button {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: left;
-    border: none;
-    background-color: $section-background-color;
-    border-radius: 25px;
-    padding: 1.5rem 2rem;
-    margin-bottom: 1.1rem;
-    margin-left: 10px;
-    box-shadow: $main-shadow;
-    max-width: 343px;
-    &:hover {
-        background-color: $color-when-hovered;
-        transform: scale(1.1);
-        .fa-mobile-alt,
-        .fa-list-ul,
-        .fa-store {
-            color: $primary-color;
-        }
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: left;
+  border: 2px solid transparent;
+  background-color: $section-background-color;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  margin-bottom: 1.25rem;
+  margin-left: 10px;
+  box-shadow: $main-shadow;
+  max-width: 343px;
+  &:hover {
+    @include button-hover-color;
+    border: 2px solid transparent;
+    transform: scale(1.1);
+    .fa-mobile-alt,
+    .fa-list-ul,
+    .fa-store {
+      color: $primary-color;
     }
-    &:focus,
-    &:active {
-        .fa-mobile-alt,
-        .fa-list-ul,
-        .fa-store {
-            color: white;
-        }
-        background-color: $color-when-active;
-        color: set-text-color($main-button-background);
-        transition: background-color 300ms, color 150ms, border 100ms, transform 200ms;
+  }
+  &:focus,
+  &:active {
+    .fa-mobile-alt,
+    .fa-list-ul,
+    .fa-store {
+      color: white;
     }
+    @include button-active-color;
+    border: 2px solid white;
+    color: set-text-color($main-button-background);
+    transition: background-color 300ms, color 150ms, border 100ms,
+      transform 200ms;
+  }
 }
+
+//Add to Favorites button//
+.add-to-favorites {
+    display: block;
+    float: right;
+    font-size: x-large;
+    .ico-gradient {
+    color: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
+    }
+  }

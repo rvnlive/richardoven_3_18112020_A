@@ -3,16 +3,12 @@ body {
   margin: 0;
 }
 
-.link-text {
-  text-decoration: none;
-}
-
 .--fadein {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 600ms;
+  animation-duration: 750ms;
 }
 
 @keyframes fadeInOpacity {
@@ -35,6 +31,10 @@ p {
   font-weight: 300;
 }
 
+.link-text {
+  text-decoration: none;
+}
+
 .dynamic--text--color {
   color: white;
 }
@@ -47,23 +47,28 @@ p {
   margin: 1rem 0 0 0;
   box-shadow: 0 5px 10px rgba(43, 43, 43, 0.219);
 }
+.main-button:hover {
+  transform: scale(1.2);
+  transition-delay: 150ms, 300ms;
+}
 
 .creator-button {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: left;
-  border: none;
+  border: 2px solid transparent;
   background-color: #f6f6f6;
   border-radius: 25px;
-  padding: 1.5rem 2rem;
-  margin-bottom: 1.1rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1.25rem;
   margin-left: 10px;
   box-shadow: 0 5px 10px rgba(43, 43, 43, 0.219);
   max-width: 343px;
 }
 .creator-button:hover {
-  background-color: #F5EDFF;
+  background-color: #f2eafb;
+  border: 2px solid transparent;
   transform: scale(1.1);
 }
 .creator-button:hover .fa-mobile-alt,
@@ -72,7 +77,8 @@ p {
   color: #9356DC;
 }
 .creator-button:focus, .creator-button:active {
-  background-color: #9356DC;
+  background-color: #ae80e5;
+  border: 2px solid white;
   color: white;
   transition: background-color 300ms, color 150ms, border 100ms, transform 200ms;
 }
@@ -82,6 +88,39 @@ p {
 .creator-button:active .fa-list-ul,
 .creator-button:active .fa-store {
   color: white;
+}
+
+.add-to-favorites {
+  display: block;
+  float: right;
+  font-size: x-large;
+}
+.add-to-favorites .ico-gradient {
+  color: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+}
+
+.__1 {
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
+  background-position-y: -55px;
+}
+
+.__2 {
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: cover;
+  background-position-y: -160px;
+}
+
+.__3 {
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+  background-position-y: -55px;
+}
+
+.__4 {
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: cover;
+  background-position-y: -60px;
 }
 
 nav {
@@ -119,6 +158,41 @@ aside .menu-creator .function-name {
   margin-left: 30px;
 }
 
+footer {
+  background-color: #353535;
+}
+footer .footer-logo {
+  filter: invert(1);
+  padding: 2rem 0 2rem 1rem;
+}
+footer .footer-logo img {
+  width: 30%;
+}
+footer ul {
+  list-style-type: none;
+  margin: -1rem auto 0 -1.5rem;
+  padding-bottom: 2rem;
+}
+footer ul li {
+  color: white;
+  font-weight: 300;
+  font-size: large;
+  letter-spacing: 0.01em;
+  line-height: 1.9rem;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li .fa-utensils {
+  font-size: smaller;
+  margin-right: 1rem;
+}
+footer ul li .fa-hands-helping {
+  font-size: small;
+  margin-right: 0.75rem;
+}
+
 header {
   display: flex;
   flex-flow: row wrap;
@@ -148,6 +222,51 @@ header .top-bar {
 }
 header .top-bar .fa-map-marker-alt {
   margin-right: 10px;
+}
+
+section {
+  padding-top: 1.5rem;
+  margin-bottom: 4.5rem;
+  background-color: #f6f6f6;
+}
+section h2 {
+  margin-left: 1rem;
+}
+section main {
+  margin: 0 1rem;
+}
+section main .restaurant-card {
+  border-radius: 20px;
+  margin-bottom: 1em;
+  box-shadow: 0 5px 10px rgba(43, 43, 43, 0.219);
+}
+section main .restaurant-card .restaurant-picture {
+  width: 343px;
+  height: 170px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+section main .restaurant-card .restaurant-picture .recently-added {
+  float: right;
+  margin: 1em 1em 0 0;
+  padding: 0.25em 1.5em;
+  background-color: #99E2D0;
+  color: #2c9c81;
+  font-size: 13px;
+  border-radius: 2px;
+}
+section main .restaurant-card .restaurant-details {
+  display: block;
+  height: 50px;
+  margin: 10px 15px 0 15px;
+}
+section main .restaurant-card .restaurant-details .restaurant-name {
+  margin-top: 0.25rem;
+  line-height: 0.25rem;
+}
+section main .restaurant-card .restaurant-details .restaurant-location {
+  padding-top: -2rem;
+  line-height: 0.15rem;
 }
 
 /*# sourceMappingURL=Blank.css.map */

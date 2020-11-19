@@ -1,0 +1,6 @@
+@mixin button-hover-color ($background-color: $primary-color) {
+    background-color: lighten($primary-color, 35%)
+}
+@mixin button-active-color ($background-color: $primary-color) {
+    background-color: lighten($primary-color, 10%)
+}

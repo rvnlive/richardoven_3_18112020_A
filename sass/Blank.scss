@@ -11,8 +11,10 @@ body {
 @import "./Base/_typography.scss";
 
 @import "./Components/_buttons.scss";
+@import "./Components/_covers.scss";
 
 @import "./Layout/_navigation.scss";
 @import "./Layout/_sidebar.scss";
+@import "./Layout/_footer.scss";
 
 @import "./Pages/_home.scss";
