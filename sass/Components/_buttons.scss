@@ -13,6 +13,8 @@
   &:hover {
     transform: scale(1.2);
     transition-delay: 150ms, 300ms;
+    background-image: linear-gradient(to bottom, lighten($secondary-color, 15%), lighten($primary-color, 15%));
+    box-shadow: $darker-main-shadow;
   }
 }
 
@@ -33,7 +35,8 @@
   &:hover {
     @include button-hover-color;
     border: 2px solid transparent;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: $darker-main-shadow;
     .fa-mobile-alt,
     .fa-list-ul,
     .fa-store {
@@ -50,6 +53,7 @@
     @include button-active-color;
     border: 2px solid white;
     color: set-text-color($main-button-background);
+    box-shadow: $darker-main-shadow;
     transition: background-color 300ms, color 150ms, border 100ms,
       transform 200ms;
   }
@@ -58,6 +62,7 @@
 //Add to Favorites button//
 .add-to-favorites {
     display: block;
+    order: 1;
     position: relative;
     float: right;
     text-align: center;
@@ -83,7 +88,16 @@
         -webkit-text-fill-color: transparent;
       }
     }
-    &:focus-within i:focus {
-      cursor: pointer;
-    }
   }
+
+//Back to Home button//
+.back-to-home {
+  display: inline;
+  float: left;
+  font-weight: 900;
+  font-size: 20px;
+  color: gray;
+  line-height: 3.5rem;
+  padding-left: 1.5rem;
+  margin-right: -25px;
+}
