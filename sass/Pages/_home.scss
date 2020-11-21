@@ -40,7 +40,9 @@ section {
   }
   main {
     margin: 0 1rem;
+      //Clickable Restaurant Cards with their destination pages//
       .restaurant-card {
+        position: relative;
         border-radius: 20px;
         margin-bottom: 1em;
         box-shadow: $main-shadow;
@@ -49,6 +51,7 @@ section {
             height: 170px;
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
+            @include cover-picture-size;
             .recently-added {
               float: right;
               margin: 1em 1em 0 0;
@@ -72,6 +75,17 @@ section {
               line-height: 0.15rem;
             }
           }
+        .card-destination::after {
+          display: block;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          /* fixes overlap error in IE7/8, with an empty gif */
+          background-image: url('../../images/empty.gif');
+        }
       }
   }
 }

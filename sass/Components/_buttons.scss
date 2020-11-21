@@ -58,9 +58,32 @@
 //Add to Favorites button//
 .add-to-favorites {
     display: block;
+    position: relative;
     float: right;
+    text-align: center;
     font-size: x-large;
-    .ico-gradient {
-    color: -webkit-gradient(linear, left top, left bottom, from($primary-color), to($secondary-color));
+    cursor: pointer;
+    z-index: 1;
+    .fas-text {
+      position: absolute;
+      visibility: hidden;
+    }
+    &:hover,
+    &:active {
+      .far {
+        visibility: hidden;
+      }
+      .fas-text {
+        position: relative;
+        visibility: visible;
+        cursor: pointer;
+        @include favorite-button;
+        background: -webkit-linear-gradient($primary-color, $secondary-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    &:focus-within i:focus {
+      cursor: pointer;
     }
   }

@@ -3,26 +3,24 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="Oh my food"
-      content="Online database for restaurants"
-    />
+    <meta name="Oh my food" content="Online database for restaurants"/>
     <!--Mobile Sizing-->
     <meta name="viewport" content="width=device-width" />
     <!--CSS-->
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <!--Font Awesome-->
+    <link href="sass/Vendors/FontAwesome5.15.1/css/all.css" type="text/css" rel="stylesheet" />
     <script defer src="JS/brands.js"></script>
     <script defer src="JS/solid.js"></script>
     <script defer src="JS/fontawesome.js"></script>
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-
     <title>Ohmyfood - Home</title>
   </head>
-
+  <!--Page content-->
   <body>
+    <!--Header & TopBar-->
     <header>
       <div class="branding">
       <img src="images/logo/ohmyfood.png" />
@@ -31,11 +29,13 @@
         <i class="fas fa-map-marker-alt"></i> Paris, Belleville
       </div>
     </header>
+    <!--Navigation-->
     <nav>
       <h2>Book the menu you like</h2>
       <p>Discover top-of-the-art restaurants we picked for you</p>
       <button class="main-button"><a class="link-text dynamic--text--color" href="#Restaurants">Explore our restaurants</a></button>
     </nav>
+    <!--Sidebar-->
     <aside>
       <h2>How it works</h2>
       <div class="menu-creator">
@@ -53,10 +53,84 @@
         </div>  
       </div>
     </aside>
+    <!--Main content-->
+    <section>
+      <h2 id="Restaurants">Restaurants</h2>
+      <main>
 
-
-
-
-
+          <div class="restaurant-card">
+            <a class="card-destination" aria-hidden="true" href="facebook.com">
+            <div class="restaurant-picture __restaurant-1">
+              <div class="recently-added">New
+              </div>
+            </div>
+            <div class="restaurant-details">
+              <span class="add-to-favorites --fadein">
+                <i class="far fa-heart"></i>
+                <i class="fas-text --favorite-fade">&#xf004;</i>
+              </span>
+                <div class="restaurant-name"><h4>The Full Palette</h4></div>
+                <div class="restaurant-location"><p>New York</p></div>
+            </div>
+            </a>
+          </div>
+        <div class="restaurant-card"><a href="facebook.com"><span class="card-destination"></span></a>
+          <div class="restaurant-picture __restaurant-2">
+            <div class="recently-added">New
+            </div>
+          </div>
+          <div class="restaurant-details">
+            <span class="add-to-favorites --fadein">
+              <i class="far fa-heart"></i>
+              <i class="fas-text --favorite-fade">&#xf004;</i>
+            </span>
+            <a href="./pages/restaurant-2.html">
+              <div class="restaurant-name"><h4>The Enchanted Plate</h4></div>
+              <div class="restaurant-location"><p>New York</p></div>
+            </a>
+          </div>
+        </div>
+        <div class="restaurant-card"><a href="facebook.com"><span class="card-destination"></span></a>
+          <div class="restaurant-picture __restaurant-3">
+          </div>
+          <div class="restaurant-details">
+            <span class="add-to-favorites --fadein">
+              <i class="far fa-heart"></i>
+              <i class="fas-text --favorite-fade">&#xf004;</i>
+            </span>
+            <a href="./pages/restaurant-3.html">
+              <div class="restaurant-name"><h4>Bastille</h4></div>
+              <div class="restaurant-location"><p>New York</p></div>
+            </a>
+          </div>
+        </div>
+        <div class="restaurant-card"><a href="facebook.com"><span class="card-destination"></span></a>
+          <div class="restaurant-picture __restaurant-4">
+          </div>
+          <div class="restaurant-details">
+            <span class="add-to-favorites --fadein">
+              <i class="far fa-heart"></i>
+              <i class="fas-text --favorite-fade">&#xf004;</i>
+            </span>
+            <a href="./pages/restaurant-4.html">
+              <div class="restaurant-name"><h4>Le Gourmand</h4></div>
+              <div class="restaurant-location"><p>New York</p></div>
+            </a>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!--Footer-->
+    <footer>
+      <div class="footer-logo">
+        <img src="images/logo/ohmyfood.png" />
+        </div>
+        <ul>
+          <li><i class="fas fa-utensils"></i>Suggest a restaurant</li>
+          <li><i class="fas fa-hands-helping"></i>Become a partner</li>
+          <li>Legal</li>
+          <li><a href="mailto:contact@ohmyfood.com">Contact</a></li>
+        </ul>
+    </footer>
   </body>
 </html>
