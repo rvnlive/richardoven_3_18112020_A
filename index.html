@@ -7,7 +7,7 @@
     <!--Mobile Sizing-->
     <meta name="viewport" content="width=device-width" />
     <!--CSS-->
-    <link href="css/prefixed/style.css" type="text/css" rel="stylesheet" />
+    <link href="/css/prefixed/style.css" type="text/css" rel="stylesheet" />
     <!--Font Awesome-->
     <link href="sass/Vendors/FontAwesome5.15.1/css/all.css" type="text/css" rel="stylesheet" />
     <script defer src="JS/brands.js"></script>
@@ -36,27 +36,27 @@
       <button class="main-button"><a class="link-text dynamic--text--color" href="#Restaurants">Explore our restaurants</a></button>
     </nav>
     <!--Sidebar-->
-    <aside>
+    <div class="personal-menu-creator">
       <h2>How it works</h2>
       <div class="menu-creator">
         <div class="creator-button --fadein">
           <span class="button-order-number dynamic--text--color">1</span>
-          <i class="fas fa-mobile-alt"></i><span class="function-name">Choose a restaurant</span>
+          <i class="fas fa-mobile-alt"></i><span class="creatorfunction-name">Choose a restaurant</span>
         </div>
         <div class="creator-button --fadein">
           <span class="button-order-number dynamic--text--color">2</span>
-          <i class="fas fa-list-ul"></i><span class="function-name">Create your menu</span>
+          <i class="fas fa-list-ul"></i><span class="creatorfunction-name">Create your menu</span>
         </div>
         <div class="creator-button --fadein">
           <span class="button-order-number dynamic--text--color">3</span>
-          <i class="fas fa-store"></i><span class="function-name">Go enjoy it at the restaurant</span>
+          <i class="fas fa-store"></i><span class="creatorfunction-name">Go enjoy it at the restaurant</span>
         </div>  
       </div>
-    </aside>
+    </div>
     <!--Main content-->
-    <section>
+    <main class="main-container">
       <h2 id="Restaurants">Restaurants</h2>
-      <main>
+      <div class="restaurant-maps">
           <div class="restaurant-card">
             <a class="clickable-part" href="pages/restaurant-1.html">
             <div class="restaurant-picture __restaurant-1">
@@ -67,7 +67,7 @@
             <div class="restaurant-details">
               <span class="add-to-favorites --fadein">
                 <i class="far fa-heart"></i>
-                <i class="fas-text --favorite-fade">&#xf004;</i>
+                <i class="fas-text --button-fade-animation">&#xf004;</i>
               </span>
               <a class="clickable-part" href="pages/restaurant-1.html">
                 <div class="restaurant-name"><h4>The Full Palette</h4></div>
@@ -85,7 +85,7 @@
           <div class="restaurant-details">
             <span class="add-to-favorites --fadein">
               <i class="far fa-heart"></i>
-              <i class="fas-text --favorite-fade">&#xf004;</i>
+              <i class="fas-text --button-fade-animation">&#xf004;</i>
             </span>
             <a class="clickable-part" href="pages/restaurant-2.html">
               <div class="restaurant-name"><h4>The Enchanted Plate</h4></div>
@@ -100,7 +100,7 @@
           <div class="restaurant-details">
             <span class="add-to-favorites --fadein">
               <i class="far fa-heart"></i>
-              <i class="fas-text --favorite-fade">&#xf004;</i>
+              <i class="fas-text --button-fade-animation">&#xf004;</i>
             </span>
             <a class="clickable-part" href="pages/restaurant-3.html">
               <div class="restaurant-name"><h4>Bastille</h4></div>
@@ -116,7 +116,7 @@
           <div class="restaurant-details">
             <span class="add-to-favorites --fadein">
               <i class="far fa-heart"></i>
-              <i class="fas-text --favorite-fade">&#xf004;</i>
+              <i class="fas-text --button-fade-animation">&#xf004;</i>
             </span>
             <a class="clickable-part" href="pages/restaurant-4.html">
               <div class="restaurant-name"><h4>Le Gourmand</h4></div>
@@ -124,8 +124,8 @@
             </a>
           </div>
         </div>
-      </main>
-    </section>
+      </div>
+    </main>
     <!--Footer-->
     <footer>
       <div class="footer-logo">

@@ -10,6 +10,7 @@
   border: transparent;
   margin: 1rem 0 0 0;
   box-shadow: $main-shadow;
+  min-width: 186px;
   &:hover {
     transform: scale(1.2);
     transition-delay: 150ms, 300ms;
@@ -100,4 +101,49 @@
   line-height: 3.5rem;
   padding-left: 1.5rem;
   margin-right: -25px;
+  cursor: pointer;
+}
+
+//Menu item button//
+.item-button {
+  display: flex;
+  flex-flow: row;
+  align-content: center;
+  min-height: 70px;
+  max-height: 85px;
+  margin: 15px 15px 0 15px;
+  overflow: hidden;
+  z-index: 1;
+    .description-wrap {
+      position: relative;
+      cursor: pointer;
+      width: 240px;
+      min-height: 70px;
+      max-height: 85px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+    }
+    .description-wrap:hover,
+    .description-wrap:active {
+    /* transition-delay: .4s; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px)
+    }
+}
+.ato-button {
+  display: block;
+  float: right;
+  position: relative;
+  margin-left: auto;
+  padding-right: 20px;
+  margin-top: -55px;
+  .ato-button:hover,
+  .ato-button:active {
+  display: block;
+  visibility: visible;
+  }
 }
