@@ -1,54 +1,55 @@
 .restaurant-menu {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    .menu-categories {
-        margin-bottom: 20px;
-        .bottom-border {
-            display: flex;
-            flex-flow: row wrap;
-            margin-left: 20px;
-            border-bottom: 3px solid $tertiary-color;
-            padding-bottom: 0;
-            width: 10%;
-        }
-        .category-items {
-            
-            .item-button {
-            @include menu-item-button;
-                .item-description {
-                    display: flex;
-                    flex-flow: column wrap;
-                    align-items: flex-start;
-                    line-height: 0;
-                    width: 100%;
-                    .item-name {
-                        display: flex;
-                        line-height: 0;
-                        padding-top: 0.1em;
-                    }
-                    .item-details {
-                        display: flex;
-                        flex-flow: row wrap;
-                        justify-content: left;
-                        margin-top: -10px;
-                        width: 60%;
-                        p {
-                            font-size: 14px;
-                            color: gray;
-                        }
-                    }
-                    .item-price {
-                        display: block;
-                        float: right;
-                        margin-left: auto;
-                        padding-right: 20px;
-                        margin-top: -15px;
-                    }
-                }
-            }
-        }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  .menu-categories {
+    margin-bottom: 20px;
+    .bottom-border {
+      display: flex;
+      flex-flow: row wrap;
+      margin-left: 5px;
+      border-bottom: 3px solid $tertiary-color;
+      padding-bottom: 0;
+      width: 10%;
     }
+    .button-container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-content: center;
+      margin: auto;
+      height: 80px;
+      .item-description:hover,
+      .item-description:active {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 50%;
+        transition: 1.5s;
+      }
+      .item-name {
+        font-weight: 500;
+        font-size: medium;
+        margin-bottom: -15px;
+      }
+      .item-details {
+        display: inline;
+        font-weight: 300;
+        font-size: smaller;
+        vertical-align: middle;
+        .item-details:hover,
+        .item-details:active {
+            display: block;
+        }
+      }
+      .item-price {
+        display: block;
+        float: right;
+        margin-right: 15px;
+        margin-left: auto;
+      }
+    }
+  }
 }

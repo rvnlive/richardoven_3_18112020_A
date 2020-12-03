@@ -1,20 +1,29 @@
 //Explore; Order button//
 .main-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: linear-gradient(
     to bottom,
     $secondary-color,
     $primary-color
   );
-  padding: 0.75rem 1.5rem;
-  border-radius: 20px;
+  padding: 0 1rem;
+  border-radius: 50px;
   border: transparent;
   margin: 1rem 0 0 0;
   box-shadow: $main-shadow;
+  height: 40px;
   min-width: 186px;
+  max-width: 190px;
   &:hover {
     transform: scale(1.2);
     transition-delay: 150ms, 300ms;
-    background-image: linear-gradient(to bottom, lighten($secondary-color, 15%), lighten($primary-color, 15%));
+    background-image: linear-gradient(
+      to bottom,
+      lighten($secondary-color, 15%),
+      lighten($primary-color, 15%)
+    );
     box-shadow: $darker-main-shadow;
   }
 }
@@ -62,34 +71,34 @@
 
 //Add to Favorites button//
 .add-to-favorites {
-    display: block;
-    order: 1;
-    position: relative;
-    float: right;
-    text-align: center;
-    font-size: x-large;
-    cursor: pointer;
-    z-index: 1;
-    .fas-text {
-      position: absolute;
+  display: block;
+  order: 1;
+  position: relative;
+  float: right;
+  text-align: center;
+  font-size: x-large;
+  cursor: pointer;
+  z-index: 1;
+  .fas-text {
+    position: absolute;
+    visibility: hidden;
+  }
+  &:hover,
+  &:active {
+    .far {
       visibility: hidden;
     }
-    &:hover,
-    &:active {
-      .far {
-        visibility: hidden;
-      }
-      .fas-text {
-        position: relative;
-        visibility: visible;
-        cursor: pointer;
-        @include favorite-button;
-        background: -webkit-linear-gradient($primary-color, $secondary-color);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
+    .fas-text {
+      position: relative;
+      visibility: visible;
+      cursor: pointer;
+      @include favorite-button;
+      background: -webkit-linear-gradient($primary-color, $secondary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
+}
 
 //Back to Home button//
 .back-to-home {
@@ -106,44 +115,39 @@
 
 //Menu item button//
 .item-button {
-  display: flex;
-  flex-flow: row;
-  align-content: center;
-  min-height: 70px;
-  max-height: 85px;
-  margin: 15px 15px 0 15px;
-  overflow: hidden;
-  z-index: 1;
-    .description-wrap {
-      position: relative;
-      cursor: pointer;
-      width: 240px;
-      min-height: 70px;
-      max-height: 85px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      -webkit-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out;
-    }
-    .description-wrap:hover,
-    .description-wrap:active {
-    /* transition-delay: .4s; */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px)
-    }
-}
-.ato-button {
-  display: block;
-  float: right;
-  position: relative;
-  margin-left: auto;
-  padding-right: 20px;
-  margin-top: -55px;
-  .ato-button:hover,
-  .ato-button:active {
-  display: block;
-  visibility: visible;
+  @include menu-item-button;
+  margin-bottom: 15px;
+  .button-effect {
+    transition: all 0.3s linear 0s;
+  }
+  .button-effect:before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 70px;
+    height: 100%;
+    background-color: $tertiary-color;
+    border-radius: 0px 10px 10px 0px;
+    transition: all 0.3s linear 0s;
+    z-index: 0;
+  }
+  .button-effect:hover:before {
+    display: flex;
+    right: 0;
+    text-indent: 0;
   }
 }
+.--button-ico-effect:before {
+  content: "\f058";
+  font-family: "Font Awesome 5 Free";
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  animation: spin 3s linear infinite paused;
+  .--button-ico-effect:focus:before {  
+  animation-play-state: running;
+  }
+  }

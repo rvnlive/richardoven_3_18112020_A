@@ -8,6 +8,7 @@
 
 //Page section modification//
 @mixin customized-section {
+    position: relative;
     margin: 0 1rem;
 }
 
@@ -26,11 +27,12 @@
 
 //Menu item button//
 @mixin menu-item-button {
-    display: flex;
-    flex-flow: row wrap;
+    display: inline-block;
+    position: relative;
     width: 330px;
     border-radius: 20px;
     padding-left: 15px;
     background-color: white;
     box-shadow: $main-shadow;
+    overflow: hidden;
 }

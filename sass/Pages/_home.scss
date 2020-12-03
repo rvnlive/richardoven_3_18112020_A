@@ -43,6 +43,15 @@ header {
   .restaurant-maps {
     @include customized-section;
       //Clickable Restaurant Cards with their destination pages//
+      .stretched-link {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        content: "";
+      }
       .restaurant-card {
         display: block;
         position: relative;
