@@ -4,8 +4,8 @@
   justify-content: center;
   padding-left: 10px;
   padding-right: 10px;
-  .menu-categories {
-    margin-bottom: 20px;
+  &__categories {
+    margin-bottom: 10px;
     .bottom-border {
       display: flex;
       flex-flow: row wrap;
@@ -14,41 +14,76 @@
       padding-bottom: 0;
       width: 10%;
     }
-    .button-container {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-content: center;
-      margin: auto;
-      height: 80px;
-      .item-description:hover,
-      .item-description:active {
+    .menu-item {
+    @include menu-item-button;
+    animation: menuFadeIn ease-in-out;
+      &:nth-of-type(1) {
+        animation-duration: 0.5s;
+      }
+      &:nth-of-type(2) {
+        animation-duration: 1s;
+      }
+      &:nth-of-type(3) {
+        animation-duration: 1.5s;
+      }
+      &:nth-of-type(4) {
+        animation-duration: 2s;
+      }
+      &:hover {
+        box-shadow: $darker-main-shadow;
+      }
+      &:hover .menu-item__name,
+      &:hover .menu-item__details {
         white-space: nowrap;
+        width: 200px;
         overflow: hidden;
         text-overflow: ellipsis;
-        width: 50%;
-        transition: 1.5s;
+        transition: all 700ms ease-in-out;
       }
-      .item-name {
-        font-weight: 500;
-        font-size: medium;
-        margin-bottom: -15px;
+      &:hover .menu-item__price {
+        right: 80px;
+        transition: right 700ms ease-in-out;
       }
-      .item-details {
-        display: inline;
-        font-weight: 300;
-        font-size: smaller;
-        vertical-align: middle;
-        .item-details:hover,
-        .item-details:active {
-            display: block;
+      &__name {
+        margin: 0;
+      }
+      &__sub-details {
+        margin-top: -15px;
+      }
+      &__details {
+        line-height: 0.75rem;
+        font-size: 14px;
+        max-width: 285px;
+        transition: all 700ms ease-in-out;
+      }
+      &__price {
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        font-size: 16px;
+        transition: right 700ms ease-out;
+      }
+      .ato__icon {
+        position: absolute;
+        right: -20%;
+        top: 0;
+        border-radius: 0 15px 15px 0;
+        background: $tertiary-color;
+        width: 20%;
+        height: 100%;
+        transition: right 700ms ease-out;
+        @include fxb;
+        .fa-check-circle {
+          color: white;
+          font-size: 18px;
         }
       }
-      .item-price {
-        display: block;
-        float: right;
-        margin-right: 15px;
-        margin-left: auto;
+      &:hover .ato__icon {
+        transition: all 700ms ease-in-out;
+        right: 0;
+      }
+      &:hover .fa-check-circle {
+        animation: Add-to-Order-spin 1000ms ease-in-out;
       }
     }
   }

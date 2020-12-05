@@ -1,43 +1,96 @@
-.--fadein {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 1200ms;
+//START Page Loader Animation//
+#loader-wrapper,
+.loader-section {
+  animation: hide 3s, move 2s;
+  animation-fill-mode: forwards;
 }
-
-@keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.--button-fade-animation {
-	animation-name: FavoriteFadeIn;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-duration: 2s;
-	animation-direction: alternate;
-	}
-
-@keyframes FavoriteFadeIn {
-	0% {
-	opacity:1;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
   100% {
-  opacity:0;
+    transform: rotate(360deg);
   }
+}
+@keyframes hide {
+  to {
+    opacity: 0;
   }
+}
+@keyframes move {
+  to {
+    z-index: -1;
+  }
+}
+//END Page Loader Animation//
 
-  @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
- }          
+//START Favorites Button Animation 1//
+.--fadein {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+//END Favorites Button Animation 1//
 
+//START Favorites Button Animation 2//
+.--button-fade-animation {
+  animation-name: FavoriteFadeIn;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-direction: alternate;
+}
+@keyframes FavoriteFadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+//END Favorites Button Animation 2//
+
+@keyframes ellipsis-animation {
+  from {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  to {
+    white-space: nowrap;
+    text-overflow: unset;
+  }
+}
+
+//START Restaurant Menu Button Animation//
+@keyframes menuFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+//END Restaurant Menu Button Animation//
+
+//START Add to Order Tick Animation//
+@keyframes Add-to-Order-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+//END Add to Order Tick Animation//

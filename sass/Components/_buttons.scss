@@ -116,38 +116,4 @@
 //Menu item button//
 .item-button {
   @include menu-item-button;
-  margin-bottom: 15px;
-  .button-effect {
-    transition: all 0.3s linear 0s;
-  }
-  .button-effect:before {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: -70px;
-    width: 70px;
-    height: 100%;
-    background-color: $tertiary-color;
-    border-radius: 0px 10px 10px 0px;
-    transition: all 0.3s linear 0s;
-    z-index: 0;
-  }
-  .button-effect:hover:before {
-    display: flex;
-    right: 0;
-    text-indent: 0;
-  }
 }
-.--button-ico-effect:before {
-  content: "\f058";
-  font-family: "Font Awesome 5 Free";
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  animation: spin 3s linear infinite paused;
-  .--button-ico-effect:focus:before {  
-  animation-play-state: running;
-  }
-  }

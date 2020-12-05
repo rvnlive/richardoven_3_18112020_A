@@ -1,4 +1,4 @@
-//Content Loading//
+//START Page Content Loading//
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -21,6 +21,14 @@
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
     z-index: 1001;
+    .loading-logo {
+        padding-left: 10px;
+        line-height: 9rem;
+        filter: invert(1);
+        img {
+            max-width: 90%;
+        }
+    }
 }
     #loader:before {
         content: "";
@@ -48,51 +56,13 @@
         -webkit-animation: spin 1.5s linear infinite;
         animation: spin 1.5s linear infinite;
     }
-
     #loader-wrapper .loader-section {
         position: fixed;
         top: 0;
-        width: 51%;
+        width: 100%;
         height: 100%;
         background: #222222;
         z-index: 1000;
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        opacity: 1;
     }
-    #loader-wrapper .loader-section.section-left {
-        left: 0;
-    }
-    #loader-wrapper .loader-section.section-right {
-        right: 0;
-    }
-
-    //Content Loaded//
-    .loaded #loader-wrapper .loader-section.section-left {
-        -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
-    .loaded #loader-wrapper .loader-section.section-right {
-        -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
-    .loaded #loader {
-        opacity: 0;
-        -webkit-transition: all 0.3s ease-out;  
-                transition: all 0.3s ease-out;
-    }
-    .loaded #loader-wrapper {
-        visibility: hidden;
-        -webkit-transform: translateY(-100%);
-                transform: translateY(-100%);
-        -webkit-transition: all 0.3s 1s ease-out;  
-                transition: all 0.3s 1s ease-out;
-    }
-
-    //No JavaScript use//
-    .no-js #loader-wrapper {
-        display: none;
-    }
+//END Page Content Loading//
