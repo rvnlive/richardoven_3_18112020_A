@@ -20,7 +20,7 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 0.20rem;
+    margin-top: 0.2rem;
     padding: 0.85rem 0;
     text-align: center;
     font-size: medium;
@@ -42,56 +42,55 @@ header {
   }
   .restaurant-maps {
     @include customized-section;
-      //Clickable Restaurant Cards with their destination pages//
-      .stretched-link {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        content: "";
+    //Clickable Restaurant Cards with their destination pages//
+    .stretched-link {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      content: "";
+    }
+    .restaurant-card {
+      display: block;
+      position: relative;
+      border-radius: 20px;
+      margin-bottom: 1em;
+      box-shadow: $main-shadow;
+      .restaurant-picture {
+        max-width: 343px;
+        height: 170px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        @include cover-picture-size;
+        .recently-added {
+          float: right;
+          margin: 1em 1em 0 0;
+          padding: 0.25em 1.5em;
+          background-color: $tertiary-color;
+          color: darken($tertiary-color, 35%);
+          font-size: 13px;
+          border-radius: 2px;
+        }
       }
-      .restaurant-card {
+      .restaurant-details {
         display: block;
-        position: relative;
-        border-radius: 20px;
-        margin-bottom: 1em;
-        box-shadow: $main-shadow;
-          .restaurant-picture {
-            width: 343px;
-            height: 170px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            @include cover-picture-size;
-            .recently-added {
-              float: right;
-              margin: 1em 1em 0 0;
-              padding: 0.25em 1.5em;
-              background-color: $tertiary-color;
-              color: darken($tertiary-color, 35%);
-              font-size: 13px;
-              border-radius: 2px;
-            }
-          }
-          .restaurant-details {
-            display: block;
-            height: 50px;
-            margin: 10px 15px 0 15px;
-            .clickable-part {
-              display: block;
-              width: 280px;
-            }
-            .restaurant-name {
-              margin-top: 0.25rem;
-              line-height: 0.25rem;
-            }
-            .restaurant-location {
-              padding-top: -2rem;
-              line-height: 0.15rem;
-            }
-          }
+        height: 50px;
+        margin: 10px 15px 0 15px;
+        .clickable-part {
+          display: block;
+          width: 280px;
+        }
+        .restaurant-name {
+          margin-top: 0.25rem;
+          line-height: 0.25rem;
+        }
+        .restaurant-location {
+          padding-top: -2rem;
+          line-height: 0.15rem;
+        }
       }
+    }
   }
 }
-

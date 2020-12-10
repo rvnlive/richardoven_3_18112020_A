@@ -16,6 +16,7 @@
   height: 40px;
   min-width: 186px;
   max-width: 190px;
+  transition: all 200ms ease-in-out;
   &:hover {
     transform: scale(1.2);
     transition-delay: 150ms, 300ms;

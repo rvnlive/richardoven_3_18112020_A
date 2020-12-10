@@ -1,34 +1,34 @@
 footer {
-    background-color: $footer-background;
-    .footer-logo {
-        filter: invert(1);
-        padding: 2rem 0 2rem 1rem;
-        img {
-            width: 100px;
-        }
+  background-color: $footer-background;
+  .footer-logo {
+    filter: invert(1);
+    padding: 2rem 0 2rem 1rem;
+    img {
+      width: 100px;
     }
-    ul {
-        list-style-type: none;
-        margin: -1rem auto 0 -1.5rem;
-        padding-bottom: 2rem;
-        li {
-            color: white;
-            font-weight: 300;
-            font-size: large;
-            letter-spacing: 0.01em;
-            line-height: 1.9rem;
-            a {
-                text-decoration: none;
-                color: white;
-            }
-            .fa-utensils {
-                font-size: smaller;
-                margin-right: 1rem;
-            }
-            .fa-hands-helping {
-                font-size: small;
-                margin-right: 0.75rem;
-            }
-        }
+  }
+  ul {
+    list-style-type: none;
+    margin: -1rem auto 0 -1.5rem;
+    padding-bottom: 2rem;
+    li {
+      color: white;
+      font-weight: 300;
+      font-size: large;
+      letter-spacing: 0.01em;
+      line-height: 1.9rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .fa-utensils {
+        font-size: smaller;
+        margin-right: 1rem;
+      }
+      .fa-hands-helping {
+        font-size: small;
+        margin-right: 0.75rem;
+      }
     }
+  }
 }

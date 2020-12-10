@@ -1,57 +1,60 @@
 //START Creator button color//
-@mixin button-hover-color ($background-color: $primary-color) {
-    background-color: lighten($primary-color, 35%)
+@mixin button-hover-color($background-color: $primary-color) {
+  background-color: lighten($primary-color, 35%);
 }
-@mixin button-active-color ($background-color: $primary-color) {
-    background-color: lighten($primary-color, 10%)
+@mixin button-active-color($background-color: $primary-color) {
+  background-color: lighten($primary-color, 10%);
 }
 //END Creator button color//
 
 //START Page section modification//
 @mixin customized-section {
-    position: relative;
-    margin: 0 1rem;
+  position: relative;
+  margin: 0 1rem;
 }
 //END Page section modification//
 
 //START Cover sizing//
 @mixin cover-picture-size {
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 //END Cover sizing//
 
 //START Font Awesome Favorite button//
 @mixin favorite-button {
-    font-family: 'Font Awesome\ 5 Free';
-    font-weight: 900;
-    font-style: normal;
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 900;
+  font-style: normal;
 }
 //END Font Awesome Favorite button//
 
 //START Menu item button//
 @mixin menu-item-button {
-    position: relative;
-    padding-left: 12px;
-    margin-bottom: 15px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: $main-shadow;
-    width: 330px;
-    min-height: 60px;
-    overflow: hidden;
-    cursor: pointer;
+  position: relative;
+  padding-left: 12px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: $main-shadow;
+  width: 330px;
+  min-height: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  outline: none;
 }
 //END Menu item button//
 
 //START Add to Order (AtO) button tick box//
-@mixin fxb($flex-direction: row,
-            $flex-wrap: wrap,
-            $flex-justify: center,
-            $flex-align: center) {
-        display: flex;
-        flex-flow: $flex-direction $flex-wrap;
-        justify-content: $flex-justify;
-        align-items: $flex-align;
+@mixin fxb(
+  $flex-direction: row,
+  $flex-wrap: wrap,
+  $flex-justify: center,
+  $flex-align: center
+) {
+  display: flex;
+  flex-flow: $flex-direction $flex-wrap;
+  justify-content: $flex-justify;
+  align-items: $flex-align;
 }
 //Add to Order (AtO) button tick box END//

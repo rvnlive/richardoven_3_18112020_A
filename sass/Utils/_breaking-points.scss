@@ -1,8 +1,10 @@
-//START Tablet Screen breaking points//
+//START Larger Screen breaking points//
+@media screen and (min-width: 376px) {
+  body {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-//END Tablet Screen breaking points//
-
-//START Laptop and Above Screen breaking points//
-
-//END Laptop and Above Screen breaking points//
-
+//END Larger Screen breaking points//

@@ -1,29 +1,29 @@
 //Cover picture//
 .restaurant-cover {
-    width: 375px;
-    height: 250px;
-    .--cover {
-        width: auto;
-        height: 100%;
-        @include cover-picture-size;
-        background-position-y: 0;
-    }
-    .--page-2 {
-        background-position-y: $page-2-coverpos;
-    }
+  width: 375px;
+  height: 250px;
+  .--cover {
+    width: auto;
+    height: 100%;
+    @include cover-picture-size;
+    background-position-y: 0;
+  }
+  .--page-2 {
+    background-position-y: $page-2-coverpos;
+  }
 }
 
 section {
-    @include customized-section;
-    background-color: $section-background-color;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    line-height: 2.5rem;
-    margin: -50px 0 0 0;
-    padding-top: 4px;
-    padding-bottom: 50px;
-    .menu-title {
-        display: block;
-        padding: 0 25px 0 20px;
-    }
+  @include customized-section;
+  background-color: $section-background-color;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  line-height: 2.5rem;
+  margin: -50px 0 0 0;
+  padding-top: 4px;
+  padding-bottom: 50px;
+  .menu-title {
+    display: block;
+    padding: 0 25px 0 20px;
+  }
 }
