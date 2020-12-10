@@ -87,7 +87,7 @@
   &:hover,
   &:active {
     .far {
-      visibility: hidden;
+      display: none;
     }
     .fas-text {
       position: relative;
